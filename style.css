@@ -1,0 +1,203 @@
+:root {
+  --Bright-orange: hsl(31, 77%, 52%);
+  --Dark-cyan: hsl(184, 100%, 22%);
+  --Very-dark-cyan: hsl(179, 100%, 13%);
+
+  /*(paragraphs)*/
+  --Transparent-white: hsla(0, 0%, 100%, 0.75);
+
+  /* (background, headings, buttons) */
+  --Very-light-gray: rgb(242, 242, 242);
+
+  /* font-family: "Big Shoulders Display", cursive;
+  font-family: "Lexend Deca", sans-serif; */
+}
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Lexend Deca", sans-serif;
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+}
+
+.attribution {
+  font-size: 1.6rem;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 1rem;
+}
+.attribution a {
+  text-decoration: none;
+  color: currentColor;
+}
+
+.attribution a:hover {
+  border-bottom: 1px solid currentColor;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 50%;
+  margin: 0 auto;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.card-1 {
+  background-color: var(--Bright-orange);
+  padding: 4rem;
+}
+.flex-box {
+  display: flex;
+  flex-direction: column;
+}
+.icon-box {
+  display: block;
+  margin-bottom: 2.4rem;
+}
+
+.heading {
+  font-family: "Big Shoulders Display", cursive;
+  font-size: 3.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 3.2rem;
+  color: var(--Very-light-gray);
+}
+.description {
+  font-size: 1.4rem;
+  line-height: 1.5;
+  color: var(--Transparent-white);
+  font-weight: 300;
+
+  margin-bottom: 6.4rem;
+}
+
+.learn-more {
+  font-family: inherit;
+  font-size: 1.6rem;
+  padding: 0.8em 1.8em;
+  background: none;
+  border-radius: 100px;
+  color: var(--Bright-orange);
+  background-color: var(--Very-light-gray);
+  border: 2px solid rgb(242, 242, 242);
+  cursor: pointer;
+}
+
+.learn-more:hover,
+.learn-more:active {
+  color: var(--Very-light-gray);
+  background-color: var(--Bright-orange);
+}
+
+/* card-2  styles */
+.card-2 {
+  background-color: var(--Dark-cyan);
+  padding: 4rem;
+}
+.card-2 button {
+  color: var(--Dark-cyan);
+}
+.card-2 button:hover,
+.card-2 button:active {
+  color: var(--Very-light-gray);
+  background-color: var(--Dark-cyan);
+}
+
+/* card-3  styles */
+.card-3 {
+  background-color: var(--Very-dark-cyan);
+  padding: 4rem;
+}
+.card-3 button {
+  color: var(--Very-dark-cyan);
+}
+
+.card-3 button:hover,
+.card-3 button:active {
+  color: var(--Very-light-gray);
+  background-color: var(--Very-dark-cyan);
+}
+
+/* media queries */
+@media (max-width: 75em) {
+  html {
+    font-size: 56.25%;
+  }
+  .learn-more {
+    font-size: 1.2rem;
+  }
+  .grid {
+    width: 55%;
+  }
+}
+
+@media (max-width: 64em) {
+  html {
+    font-size: 50%;
+  }
+  .grid {
+    width: 60%;
+  }
+}
+
+/* tablet teritory */
+@media (max-width: 48em) {
+  html {
+    font-size: 43.5%;
+  }
+  .grid {
+    width: 70%;
+  }
+}
+
+@media (max-width: 32.5em) {
+  html {
+    font-size: 62.5%;
+  }
+  .container {
+    margin: 8rem auto;
+  }
+  .grid {
+    width: 80%;
+    grid-template-columns: 1fr;
+  }
+  .card-1,
+  .card-2,
+  .card-3 {
+    padding: 6rem 4rem;
+  }
+  .attribution {
+    font-size: 1.4rem;
+    margin-top: -6.4rem;
+  }
+}
+
+@media (max-width: 20em) {
+  .attribution {
+    font-size: 1.2rem;
+  }
+}
